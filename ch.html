@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio | Contact</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-section {
+      padding: 4rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 3rem;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .contact-btn {
+      display: block;
+      background: #111;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: subtlePulse 4s infinite alternate;
+    }
+
+    .contact-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #00ffff;
+      box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    }
+
+    .contact-btn:hover::before {
+      left: 100%;
+    }
+
+    .contact-btn.whatsapp { border-color: #25D366; color: #25D366; }
+    .contact-btn.whatsapp:hover { border-color: #128C7E; color: #128C7E; }
+
+    .contact-btn.gmail { border-color: #D14836; color: #D14836; }
+    .contact-btn.gmail:hover { border-color: #B23A2B; color: #B23A2B; }
+
+    .contact-btn.tiktok { border-color: #000; color: #fff; background: #000; }
+    .contact-btn.tiktok:hover { background: #222; }
+
+    .contact-btn.twitter { border-color: #1DA1F2; color: #1DA1F2; }
+    .contact-btn.twitter:hover { border-color: #0C85D0; color: #0C85D0; }
+
+    .contact-btn i {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes subtlePulse {
+      0% { border-color: #fff; }
+      100% { border-color: #888; }
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <!-- Icons from Lucide (CDN) - FIXED URL -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- LOADER -->
+  <div id="loader"></div>
+
+  <!-- NAVBAR -->
+  <nav class="futuristic-nav">
+    <ul>
+      <li><a href="index.html">Home<span class="border"></span></a></li>
+      <li><a href="about.html">About<span class="border"></span></a></li>
+      <li><a href="contact.html">Certificates<span class="border"></span></a></li>
+      <li><a href="vrash.html">VRA Shell<span class="border"></span></a></li>
+      <li><a href="ch.html" class="active">Contact<span class="border"></span></a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="contact-section">
+      <h2 class="section-title">CONNECT WITH ME</h2>
+      <p style="font-size: 1.2rem; color: #bbb; margin-bottom: 3rem;">
+      </p>
+
+      <div class="contact-grid">
+        <!-- WhatsApp - FIXED URL -->
+        <a href="https://wa.me/6285166984285" class="contact-btn whatsapp" target="_blank">
+          <i data-lucide="message-circle"></i>
+          WhatsApp
+        </a>
+
+        <!-- Gmail -->
+        <a href="mailto:besoklibur457@gmail.com" class="contact-btn gmail" target="_blank">
+          <i data-lucide="mail"></i>
+          Gmail
+        </a>
+
+        <!-- TikTok - FIXED URL -->
+        <a href="https://tiktok.com/@iamvimcc" class="contact-btn tiktok" target="_blank">
+          <i data-lucide="music"></i>
+          TikTok
+        </a>
+
+        <!-- Twitter -->
+        <a href="https://twitter.com/VIMCCATALYSTX" class="contact-btn twitter" target="_blank">
+          <i data-lucide="twitter"></i>
+          Twitter
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Load Lucide Icons
+    lucide.createIcons();
+
+    // Page load animation
+    window.addEventListener('load', function() {
+      document.getElementById('loader').style.display = 'none';
+      document.body.classList.add('page-loaded');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio | VRA Shell</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .terminal {
+      background: #000;
+      color: #ff0000;
+      font-family: 'Courier New', monospace;
+      padding: 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 2rem 0;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
+      position: relative;
+    }
+    .terminal pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      line-height: 1.5;
+    }
+    .command {
+      color: #00ff99;
+      font-weight: bold;
+    }
+    .output {
+      color: #ffffff;
+    }
+    .logo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      background-image: url('img/ascii-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0 auto 1rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .feature {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+      border-color: #ff00ff;
+      box-shadow: 0 5px 30px rgba(255, 0, 255, 0.2);
+    }
+    .feature h3 {
+      color: #ff00ff;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .philosophy {
+      text-align: center;
+      margin-top: 3rem;
+      padding: 2rem;
+      border-left: 4px solid #ff00ff;
+      background: #0a0a0a;
+    }
+    .philosophy blockquote {
+      font-size: 1.3rem;
+      color: #fff;
+      font-style: normal;
+      line-height: 1.6;
+    }
+    .structure {
+      background: #0a0a0a;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      font-family: 'Courier New', monospace;
+      color: #00ff99;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 2rem 0 1rem;
+      border-bottom: 2px solid #ff0000;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #bbb;
+      margin-bottom: 3rem;
+      display: block;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- LOADER -->
+  <div id="loader"></div>
+
+  <!-- NAVBAR -->
+  <nav class="futuristic-nav">
+    <ul>
+      <li><a href="index.html">Home<span class="border"></span></a></li>
+      <li><a href="about.html">About<span class="border"></span></a></li>
+      <li><a href="contact.html">Certificates<span class="border"></span></a></li>
+      <li><a href="vrash.html" class="active">VRA Shell<span class="border"></span></a></li>
+      <li><a href="ch.html">Contact<span class="border"></span></a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="shell-section">
+      <div class="container">
+        <h1 class="section-title">VRA SHELL</h1>
+        <p class="subtitle">The first AI-integrated shell in the world — built from scratch by David, age 14.</p>
+
+        <div class="terminal">
+          <div class="logo"></div>
+          <pre>
+[16:00:21] ~ [🟢] success _ vra help
+=======================================================
+📁 ai & session
+   vra -a "<prompt>"         'h ask vera ai
+   vra reset-session          'h reset conversation (clear session)
+   vra errors                 'h show last 5 error logs
+
+📦 package management
+   vra -u                     'h auto update & upgrade packages
+   vra -i <pkg>               'h install package
+   vra -r <pkg>               'h remove package
+   vra -s <pkg>               'h search for package
+   vra -l                     'h list installed packages
+
+📝 file & editing
+   vra -v <file>              'h edit file using nano
+
+💡 tools & help
+   vra -t                     'h set terminal theme
+   vra help                   'h show this menu
+   vra                        'h show this menu
+=======================================================
+[16:00:35] ~ [🟢] success _ 
+          </pre>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <h3>🧠 AI Integration</h3>
+            <p>Ask Vera AI directly from the shell. No web browser needed.</p>
+          </div>
+          <div class="feature">
+            <h3>📦 Package Manager</h3>
+            <p>Install, update, and manage packages with <code>vra -i</code>, <code>vra -u</code>, etc.</p>
+          </div>
+          <div class="feature">
+            <h3>📄 File Editing</h3>
+            <p>Edit files instantly with <code>vra -v <file></code> → opens nano.</p>
+          </div>
+          <div class="feature">
+            <h3>⚙️ Theme Control</h3>
+            <p>Change terminal theme with <code>vra -t</code> — customize your environment.</p>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
